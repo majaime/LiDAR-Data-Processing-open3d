@@ -15,7 +15,7 @@ num = np.fromfile(inputPath, dtype='float32', count=-1, sep='', offset=0)
 new = np.asarray(num).reshape(-1, 4)
 
 # Storing the encrypted (.bin) file in (.csv) file
-for i in range(0, len(new)): # len(new)
+for i in range(0, len(new)):
     print(new[i])
     with open(outputPath, 'a', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
