@@ -7,27 +7,27 @@ import matplotlib.pyplot as plt
 from matplotlib import figure
 import open3d as o3d
 
-""" Reading data """
+# Reading data
 inputPath = 'PATH_TO_YOUR_INPUT_BIN_FILE/filename.bin'
 outputPath = 'WHERE_YOU_WANT_TO_SAVE_YOUR_OUTPUT/filename.csv'
 
 num = np.fromfile(inputPath, dtype='float32', count=-1, sep='', offset=0)
 new = np.asarray(num).reshape(-1, 4)
 
-""" Storing the encrypted (.bin) file in (.csv) file """
+# Storing the encrypted (.bin) file in (.csv) file
 for i in range(0, len(new)): # len(new)
     print(new[i])
     with open(outputPath, 'a', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(new[i])
 
-""" Assigning data to different variables """
+# Assigning data to different variables
 X = num[0::4]
 Y = num[1::4]
 Z = num[2::4]
 W = num[3::4]
 
-""" Creating point cloud """
+# Creating point cloud
 xyz = np.zeros((np.size(X), 3))
 xyz[:, 0] = X
 xyz[:, 1] = Y
