@@ -1,4 +1,7 @@
-
+# This code reads a .bin file, stores the data in a .csv file, and 
+# processes (filtering, segmenting, clustering, ...) LiDAR point
+# cloud data using "open3d" library in Python.
+ 
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import figure
