@@ -1,5 +1,5 @@
 # LiDAR-Data-Processing-open3d
-This code processes (filtering, segmenting, clustering, ...) LiDAR point cloud data using "open3d" library in Python.
+This code processes (filtering, segmenting, & clustering) LiDAR point cloud data using "open3d" library in Python.
 
 It reads .bin file and processes the data in a point-cloud format.
 It is tested with the raw data available at [KITTI](http://www.cvlibs.net/datasets/kitti/raw_data.php).
